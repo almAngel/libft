@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 21:16:24 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/08 21:58:07 by angel            ###   ########.fr       */
+/*   Created: 2024/12/08 23:35:30 by angel             #+#    #+#             */
+/*   Updated: 2024/12/08 23:47:25 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+    size_t i;
+    int res;
+
+    i = 0;
+    res = 0;
+    while(s1[i] && s2[i] && i < n)
+    {
+        res += s1[i] - s2[i];
+        i++;
+    }   
+    return res;
 }
 
-// #include <ctype.h>
-// #include <stdio.h>
+// #include <string.h>
 
 // int main(void)
 // {
-//     printf("OLD: %c\n", toupper('0'));
-//     printf("NEW: %c\n", ft_toupper('0'));
-//     return (0);
+//     char s1[] = "ABDD";
+//     char s2[] = "ABCD";
+
+//     printf("%d\n", strncmp(s1, s2, 2));
+//     printf("%d\n", ft_strncmp(s1, s2, 2));
+
+//     return 0;
 // }

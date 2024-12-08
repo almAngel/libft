@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:56:55 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/04 21:14:11 by angellop         ###   ########.fr       */
+/*   Updated: 2024/12/08 21:49:58 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ size_t		ft_strlcat(char *dest, const char *src, size_t size);
 
 // WORKING 4/12/2024
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
+
+int			ft_toupper(int c);
 
 #endif

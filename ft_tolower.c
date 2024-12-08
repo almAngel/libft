@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 12:45:54 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/03 17:55:14 by angellop         ###   ########.fr       */
+/*   Created: 2024/12/08 21:58:20 by angel             #+#    #+#             */
+/*   Updated: 2024/12/08 21:59:22 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
 // #include <ctype.h>
@@ -23,7 +22,7 @@ int	ft_isalpha(int c)
 
 // int main(void)
 // {
-//     printf("OLD: %d\n", isalpha('A'));
-//     printf("NEW: %d\n", ft_isalpha('A'));
+//     printf("OLD: %c\n", tolower('A'));
+//     printf("NEW: %c\n", ft_tolower('B'));
 //     return (0);
 // }

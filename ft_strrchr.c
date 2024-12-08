@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 21:16:24 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/08 21:58:07 by angel            ###   ########.fr       */
+/*   Created: 2024/12/08 21:59:50 by angel             #+#    #+#             */
+/*   Updated: 2024/12/08 22:59:13 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+char    *ft_strrchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+    char *s_aux;
+
+    s_aux = 0;
+	while(*s)
+    {
+        if(*s == c)
+            s_aux = (char *) s;
+        s++;
+    }
+    return (char *) s_aux;
 }
 
-// #include <ctype.h>
+// #include <string.h>
 // #include <stdio.h>
 
 // int main(void)
 // {
-//     printf("OLD: %c\n", toupper('0'));
-//     printf("NEW: %c\n", ft_toupper('0'));
+//     printf("OLD: %s\n", strrchr("Angeeeeeeaeaeaeael", 'a'));
+//     printf("NEW: %s\n", ft_strrchr("Angeeeeeeaeaeaeael", 'a'));
 //     return (0);
 // }

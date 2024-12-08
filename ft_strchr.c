@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 12:45:54 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/03 17:55:14 by angellop         ###   ########.fr       */
+/*   Created: 2024/12/08 21:59:50 by angel             #+#    #+#             */
+/*   Updated: 2024/12/08 23:35:17 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char    *ft_strchr(const char *s, int c)
 {
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	while(*s)
+    {
+        if(*s == c)
+            return (char *) s;
+        s++;
+    }
+    return 0;
 }
 
-// #include <ctype.h>
+// #include <string.h>
 // #include <stdio.h>
 
 // int main(void)
 // {
-//     printf("OLD: %d\n", isalpha('A'));
-//     printf("NEW: %d\n", ft_isalpha('A'));
+//     printf("OLD: %s\n", strchr("Angel", 'x'));
+//     printf("NEW: %s\n", ft_strchr("Angel", 'x'));
 //     return (0);
 // }
