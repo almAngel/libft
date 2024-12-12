@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 23:48:32 by angel             #+#    #+#             */
-/*   Updated: 2024/12/09 00:07:38 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/12 16:19:22 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void    *ft_memchr(const void *s, int c, size_t n)
         
 }
 
-#include <string.h>
+// #include <string.h>
 
-int main(void)
-{
-    char s1[] = "Hello World";
+// int main(void)
+// {
+//     char s1[] = "Hello World";
 
-    printf("%s\n", (char *) memchr(s1, 'o', 3));
-    printf("%s\n", (char *) ft_memchr(s1, 'o', 3));
-}
+//     printf("%s\n", (char *) memchr(s1, 'o', 3));
+//     printf("%s\n", (char *) ft_memchr(s1, 'o', 3));
+// }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 19:47:00 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/12 14:17:50 by angel            ###   ########.fr       */
+/*   Created: 2024/12/12 16:42:03 by angel             #+#    #+#             */
+/*   Updated: 2024/12/12 16:50:35 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,32 @@ size_t	ft_strlen(const char *str)
 		str++;
 	}
 	return (n);
+}
+
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	char	*s_cpy;
+	char	len;
+
+	i = 0;
+	len = ft_strlen(s);
+	s_cpy = malloc(len);
+	while(s[i])
+	{
+		s_cpy[i] = s[i];
+		i++;
+	}
+	return (s_cpy);
+}
+
+#include <string.h>
+
+int main(void)
+{
+	char	*s = "Hello World!";
+
+	printf("og: %s\n", strdup(s));
+	printf("new: %s\n", ft_strdup(s));
+	return (0);
 }
