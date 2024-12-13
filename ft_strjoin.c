@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:58:59 by angel             #+#    #+#             */
-/*   Updated: 2024/12/12 17:07:44 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/12 21:05:58 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlen(const char *str)
 	return (n);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 	size_t	i;
@@ -36,9 +36,15 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	t_len = s1_len + ft_strlen(s2);
 	s3 = malloc(t_len);
-	while(i < s1_len)
-		s3[i] = s1[i++];
-	while(i < t_len)
-		s3[i] = s2[i++];
+	while (i < s1_len)
+	{
+		s3[i] = s1[i];
+		i++;
+	}
+	while (i < t_len)
+	{
+		s3[i] = s2[i];
+		i++;
+	}
 	return (s3);
 }

@@ -6,7 +6,7 @@
 #    By: angel <angel@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 12:42:29 by angellop          #+#    #+#              #
-#    Updated: 2024/12/12 20:01:17 by angel            ###   ########.fr        #
+#    Updated: 2024/12/12 21:25:37 by angel            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ COMPILER = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
-FILES =	ft_isalpha.c	ft_toupper.c	\
+SRC =	ft_isalpha.c	ft_toupper.c	\
 		ft_isdigit.c	ft_tolower.c	\
 		ft_isalnum.c	ft_strchr.c		\
 		ft_isascii.c	ft_strrchr.c	\
@@ -29,27 +29,21 @@ FILES =	ft_isalpha.c	ft_toupper.c	\
 		ft_strlcpy.c	ft_strdup.c		\
 		ft_strlcat.c	ft_substr.c		\
 		ft_strjoin.c	ft_strtrim.c	\
-		ft_split.c		
-		
-OBJ = $(SRC:.c=.o)
+
+OFILES = $(SRC:.c=.o)
 INCLUDE = libft.h
 
-all: $(NAME)
+all: $(NAME) clean
 
-$(NAME): $(OBJ) $(INCLUDE) $(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+$(NAME): $(OFILES)
+	ar rcs $(NAME) $(OFILES)
 
-bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE) $(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+clean: 
+	rm -f $(OFILES)
 
-%.o: %.c $(COMPILER) $(CFLAGS) -c -o $@ $<
-
-clean:
-	rm -rdf $(wildcard */*.o)
-
-fclean: clean
+fclean: clean 
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
-rebonus: fclean bonus
-
-.PHONY: all clean fclean re purge norme
+.PHONY: all clean fclean re

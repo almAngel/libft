@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:10:05 by angel             #+#    #+#             */
-/*   Updated: 2024/12/12 19:56:40 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/12 20:24:37 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,19 @@ size_t	ft_strlen(const char *str)
 
 int	ft_fromset(char c, const char *set)
 {
-	while(*set)
+	while (*set)
 		if (c == *set++)
 			return (1);
 	return (0);
 }
 
-char		*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	j;
 	size_t	z;
 	char	*response;
-	
+
 	i = 0;
 	z = 0;
 	j = ft_strlen(s1) - 1;

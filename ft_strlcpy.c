@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:02:28 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/08 22:54:55 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/12 21:52:24 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,13 @@ size_t	ft_strlen(const char *str)
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	destlen;
 	size_t	srclen;
 
 	i = 0;
-	destlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
 	if (size > 0)
 	{
-		if (size <= destlen)
-			return (size + srclen);
-		while (src[i] && i < (size - 1))
+		while (src[i] && i < size - 1)
 		{
 			dest[i] = src[i];
 			i++;
@@ -48,21 +44,12 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (srclen);
 }
 
-#include <stdio.h>
-#include <string.h>
-#include <bsd/string.h>
-#include <strings.h>
-#include <ctype.h>
-#include <stdlib.h>
+// #include <bsd/string.h>
 
-int	main(void)
-{
-	// char s[] = "Hola";
-	char s2[] = "Hola";
-
-	// printf("%zu\n", strlcpy(s, "Mundo", 5));
-	printf("%zu\n", ft_strlcpy(s2, "Mundo", 5));
-
-	// printf("%s\n", s);
-	printf("%s", s2);
-}
+// int main(void)
+// {
+// 	char	s[] = "rrrrrr";
+// 	char	s2[] = "rrrrrr";
+// 	printf("%zu\n", strlcpy(s, "lorem ipsum", 3));
+// 	printf("%zu\n", ft_strlcpy(s2, "lorem ipsum", 3));
+// }

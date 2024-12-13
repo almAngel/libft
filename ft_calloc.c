@@ -6,17 +6,24 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:30:58 by angel             #+#    #+#             */
-/*   Updated: 2024/12/12 16:43:42 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/13 02:16:20 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    if (nmemb == 0 || size == 0)
-        return (NULL);
-    return (malloc(nmemb * size));
+	void	*result;
+
+	result = malloc(nmemb * size);
+	if (!result)
+		return (NULL);
+	else
+	{
+		ft_bzero(result, (nmemb * size));
+		return (result);
+	}
 }
 
 // int main(void)
