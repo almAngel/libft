@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 00:42:05 by angel             #+#    #+#             */
-/*   Updated: 2024/12/13 02:13:10 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/17 21:04:54 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,29 +53,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-// #include <stdlib.h>
-// #include <limits.h>
-
-// int main(void)
-// {
-//     printf("test 	1:   %d\n", ft_atoi(" \t\v\n\r\f123"));
-// 	printf("test 	2:   %d\n", ft_atoi("0"));
-// 	printf("test 	3:   %d\n", ft_atoi("-1000043"));
-// 	printf("test 	4:   %d\n", ft_atoi("+0000000000000000000000000000000000000000000000000000123"));
-// 	printf("test 	5:   %d\n", ft_atoi("    123"));
-// 	printf("test 	6:   %d\n", ft_atoi("--123"));
-// 	printf("test 	7:   %d\n", ft_atoi("-+123"));
-// 	printf("test 	8:   %d\n", ft_atoi("+-123"));
-// 	printf("test 	9:   %d\n", ft_atoi("++123"));
-// 	printf("test 	10:   %d\n", ft_atoi("- 123"));
-// 	printf("test 	11:   %d\n", ft_atoi("+ 123"));
-// 	printf("test 	12:   %d\n", ft_atoi("+\n123"));
-// 	printf("test 	13:   %d\n", ft_atoi("1209"));
-// 	printf("test 	14:   %d\n", ft_atoi("12/3"));
-// 	printf("test 	15:   %d\n", ft_atoi("12;3"));
-// 	printf("test 	16:   %d\n", ft_atoi("-1000043"));
-// 	printf("test 	17:   %d\n", ft_atoi("-1000043"));
-
-//     return 0;
-// }

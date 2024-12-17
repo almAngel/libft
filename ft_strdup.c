@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:42:03 by angel             #+#    #+#             */
-/*   Updated: 2024/12/12 20:26:06 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/17 13:26:55 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,15 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = ft_strlen(s);
-	s_cpy = malloc(len);
+	s_cpy = malloc(len + 1);
+	if (!s_cpy)
+		return (NULL);
 	while (s[i])
 	{
 		s_cpy[i] = s[i];
 		i++;
 	}
+	s_cpy[i] = 0;
 	return (s_cpy);
 }
 
@@ -46,9 +49,10 @@ char	*ft_strdup(const char *s)
 
 // int main(void)
 // {
-// 	char	*s = "Hello World!";
 
-// 	printf("og: %s\n", strdup(s));
-// 	printf("new: %s\n", ft_strdup(s));
+// 	printf("Test 1: %s\n", ft_strdup(""));
+// 	printf("Test 2: %s\n", ft_strdup("sadfvbf"));
+// 	printf("Test 3: %s\n", ft_strdup("fdfjkdf\n35346"));
+
 // 	return (0);
 // }
