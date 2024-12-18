@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 01:33:30 by angel             #+#    #+#             */
-/*   Updated: 2024/12/18 01:39:46 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/18 01:53:27 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	char	*buff;
-	
-	buff = malloc(2);
-	buff[0] = c;
-	buff[1] = 0;
-	write(fd, buff, 1);
-	free(buff);
+	write(fd, &c, 1);
 }
