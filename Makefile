@@ -6,7 +6,7 @@
 #    By: angel <angel@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 12:42:29 by angellop          #+#    #+#              #
-#    Updated: 2024/12/12 21:25:37 by angel            ###   ########.fr        #
+#    Updated: 2024/12/18 01:04:51 by angel            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ SRC =	ft_isalpha.c	ft_toupper.c	\
 		ft_strlcpy.c	ft_strdup.c		\
 		ft_strlcat.c	ft_substr.c		\
 		ft_strjoin.c	ft_strtrim.c	\
+		ft_itoa.c		\
+		ft_strmapi.c	\
 
 OFILES = $(SRC:.c=.o)
 INCLUDE = libft.h
