@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:56:55 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/18 01:04:20 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/18 01:27:01 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ char		*ft_strtrim(char const *s1, char const *set);
 // char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
