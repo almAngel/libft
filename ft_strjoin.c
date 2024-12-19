@@ -6,24 +6,11 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:58:59 by angel             #+#    #+#             */
-/*   Updated: 2024/12/17 21:25:54 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:45:57 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	n;
-
-	n = 0;
-	while (*str)
-	{
-		n++;
-		str++;
-	}
-	return (n);
-}
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
@@ -51,11 +38,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	s3[i] = 0;
 	return (s3);
 }
-
-// int main(void)
-// {
-
-// 	printf("Test 1: %s\n", ft_strjoin("abcd", "efghi"));
-
-// 	return (0);
-// }

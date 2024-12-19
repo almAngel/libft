@@ -6,24 +6,11 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:02:28 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/12 21:52:24 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:46:11 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	n;
-
-	n = 0;
-	while (*str)
-	{
-		n++;
-		str++;
-	}
-	return (n);
-}
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -43,13 +30,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (srclen);
 }
-
-// #include <bsd/string.h>
-
-// int main(void)
-// {
-// 	char	s[] = "rrrrrr";
-// 	char	s2[] = "rrrrrr";
-// 	printf("%zu\n", strlcpy(s, "lorem ipsum", 3));
-// 	printf("%zu\n", ft_strlcpy(s2, "lorem ipsum", 3));
-// }

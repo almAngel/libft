@@ -6,7 +6,7 @@
 #    By: angel <angel@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 12:42:29 by angellop          #+#    #+#              #
-#    Updated: 2024/12/18 02:01:46 by angel            ###   ########.fr        #
+#    Updated: 2024/12/19 16:12:19 by angel            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC =	ft_isalpha.c	ft_toupper.c	\
 		ft_strlcpy.c	ft_strdup.c		\
 		ft_strlcat.c	ft_substr.c		\
 		ft_strjoin.c	ft_strtrim.c	\
-		ft_itoa.c		\
+		ft_itoa.c		ft_split.c		\
 		ft_strmapi.c	ft_striteri.c	\
 		ft_putchar_fd.c	ft_putstr_fd.c	\
 		ft_putendl_fd.c	ft_putnbr_fd.c	
@@ -42,12 +42,12 @@ all: $(NAME) clean
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES)
 
-clean: 
+clean:
 	rm -f $(OFILES)
 
-fclean: clean 
+fclean: clean
 	rm -f $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
 .PHONY: all clean fclean re

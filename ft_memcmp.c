@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 00:08:29 by angel             #+#    #+#             */
-/*   Updated: 2024/12/13 02:12:52 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:32:55 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		res = (unsigned char) s1_aux[i] - (unsigned char) s2_aux[i];
 	return (res);
 }
-
-// #include <string.h>
-
-// int main(void)
-// {
-// 	printf("test 1: %d\n", ft_memcmp("abc", "abc", 7));					// 0
-
-//     return 0;
-// }

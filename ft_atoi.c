@@ -6,24 +6,11 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 00:42:05 by angel             #+#    #+#             */
-/*   Updated: 2024/12/17 21:04:54 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:44:51 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	n;
-
-	n = 0;
-	while (*str)
-	{
-		n++;
-		str++;
-	}
-	return (n);
-}
 
 int	ft_atoi(const char *nptr)
 {

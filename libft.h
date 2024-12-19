@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:56:55 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/18 02:02:20 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 16:11:49 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include <stdio.h>
 # include <malloc.h>
 
+size_t		ft_strlen(const char *str);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
-size_t		ft_strlen(const char *str);
 void		*ft_memset(void *buff, int c, size_t count);
 void		ft_bzero(void *buff, size_t n);
 void		*ft_memcpy(void *buff, const void *src, size_t count);
@@ -43,7 +43,7 @@ char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
-// char		**ft_split(char const *s, char c);
+char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));

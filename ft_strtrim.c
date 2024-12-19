@@ -6,26 +6,13 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:10:05 by angel             #+#    #+#             */
-/*   Updated: 2024/12/17 22:48:44 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/20 00:13:59 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	n;
-
-	n = 0;
-	while (*str)
-	{
-		n++;
-		str++;
-	}
-	return (n);
-}
-
-int	ft_fromset(char c, const char *set)
+static int	ft_fromset(char c, const char *set)
 {
 	while (*set)
 		if (c == *set++)
@@ -33,27 +20,7 @@ int	ft_fromset(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	char	*s_cpy;
-	char	len;
-
-	i = 0;
-	len = ft_strlen(s);
-	s_cpy = malloc(len + 1);
-	if (!s_cpy)
-		return (NULL);
-	while (s[i])
-	{
-		s_cpy[i] = s[i];
-		i++;
-	}
-	s_cpy[i] = 0;
-	return (s_cpy);
-}
-
-static	char	*trimmed(const char *s1, size_t start, size_t len)
+static	char	*ft_trimmed(const char *s1, size_t start, size_t len)
 {
 	char	*response;
 	size_t	i;
@@ -86,14 +53,5 @@ char	*ft_strtrim(const char *s1, const char *set)
 		i++;
 	while (ft_fromset(s1[j], set))
 		j--;
-	return (trimmed(s1, i, j - (i - 1)));
+	return (ft_trimmed(s1, i, j - (i - 1)));
 }
-
-// int main(void)
-// {
-// 	printf("%s\n", ft_strtrim("", ""));
-// 	printf("%s\n", ft_strtrim("@-.Hola_Mundo!.-@", "@-."));
-// 	printf("%s\n", ft_strtrim("abcd", ""));
-
-// 	return (0);
-// }

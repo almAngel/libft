@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 01:42:42 by angel             #+#    #+#             */
-/*   Updated: 2024/12/18 01:51:21 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:34:07 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,3 @@ void	ft_putstr_fd(char *s, int fd)
 	while (*s)
 		write(fd, s++, 1);
 }
-
-// int	main (void)
-// {
-// 	ft_putstr_fd("abcdef", 4);
-// 	return (0);
-// }

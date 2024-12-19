@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 23:48:32 by angel             #+#    #+#             */
-/*   Updated: 2024/12/13 02:05:55 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:32:49 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-// #include <string.h>
-
-// int main(void)
-// {
-// 		char	*s = "Hello World";
-//     	printf("%s\n", (char *) ft_memchr(s, 'o', 3));
-// }

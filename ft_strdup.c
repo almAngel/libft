@@ -6,24 +6,11 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:42:03 by angel             #+#    #+#             */
-/*   Updated: 2024/12/17 13:26:55 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 17:15:00 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	n;
-
-	n = 0;
-	while (*str)
-	{
-		n++;
-		str++;
-	}
-	return (n);
-}
 
 char	*ft_strdup(const char *s)
 {
@@ -44,15 +31,3 @@ char	*ft_strdup(const char *s)
 	s_cpy[i] = 0;
 	return (s_cpy);
 }
-
-// #include <string.h>
-
-// int main(void)
-// {
-
-// 	printf("Test 1: %s\n", ft_strdup(""));
-// 	printf("Test 2: %s\n", ft_strdup("sadfvbf"));
-// 	printf("Test 3: %s\n", ft_strdup("fdfjkdf\n35346"));
-
-// 	return (0);
-// }

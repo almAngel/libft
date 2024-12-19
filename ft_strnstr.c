@@ -6,7 +6,7 @@
 /*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 23:43:55 by angel             #+#    #+#             */
-/*   Updated: 2024/12/12 20:33:09 by angel            ###   ########.fr       */
+/*   Updated: 2024/12/19 12:37:27 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-// #include <bsd/string.h>
-
-// int main(void)
-// {
-//     char s1[] = "Angel Lopez Molina";
-//     // char s2[] = "ABCD";
-
-//     printf("%s\n", strnstr(s1, "Lopez", 11));
-//     printf("%s\n", ft_strnstr(s1, "Lopez", 11));
-
-//     return 0;
-// }
