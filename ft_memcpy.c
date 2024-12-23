@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 19:57:34 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/19 12:33:39 by angel            ###   ########.fr       */
+/*   Created: 2024/12/20 16:26:24 by angellop          #+#    #+#             */
+/*   Updated: 2024/12/20 16:26:26 by angellop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *buff, const void *src, size_t n)
 	char		*buff_aux;
 	const char	*src_aux;
 
+	if (buff == 0 && src == 0)
+		return (0);
 	buff_aux = (char *) buff;
 	src_aux = (const char *) src;
 	while (n--)
