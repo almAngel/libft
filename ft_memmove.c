@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:26:30 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/20 16:26:32 by angellop         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:30:07 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *buff, const void *src, size_t n)
 	char	*src_aux;
 	size_t	i;
 
-	if ((buff == 0 && src == 0) || n < 0)
+	if (buff == 0 && src == 0)
 		return (buff);
 	i = 0;
 	buff_aux = (char *) buff;

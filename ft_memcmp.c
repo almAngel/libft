@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: angel <angel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:26:16 by angellop          #+#    #+#             */
-/*   Updated: 2024/12/20 16:26:18 by angellop         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:28:03 by angel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*s1_aux;
 	unsigned char	*s2_aux;
 	size_t			i;
-	int				res;
 
 	i = 0;
-	res = 0;
 	s1_aux = (unsigned char *) s1;
 	s2_aux = (unsigned char *) s2;
 	while (i < n)

@@ -6,7 +6,7 @@
 #    By: angellop <angellop@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/20 16:29:58 by angellop          #+#    #+#              #
-#    Updated: 2024/12/20 19:29:33 by angellop         ###   ########.fr        #
+#    Updated: 2024/12/28 17:44:07 by angellop         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,31 +46,45 @@ MY_SOURCES = ft_atoi.c\
 		ft_tolower.c\
 		ft_toupper.c
 
+B_SOURCES = ft_lstnew.c 		\
+			ft_lstadd_front.c 	\
+			ft_lstsize.c		\
+			ft_lstlast.c		\
+			ft_lstadd_back.c	\
+			ft_lstdelone.c		\
+			ft_lstclear.c		\
+			ft_lstiter.c		\
+			ft_lstmap.c
+
 CC 		= cc
 
 OBJS	= $(MY_SOURCES:.c=.o)
+B_OBJS 	= $(B_SOURCES:.c=.o)
 
 RM		= rm -f
 
 LIBC	= ar -rcs
 
-FLAGS	= -Wall -Wextra -Werror
+FLAGS	= -fPIC -Wall -Wextra -Werror
 
 INCS	= .
 
-$(NAME): ${OBJS}
-	${LIBC} $(NAME) $(OBJS)
+$(NAME): ${OBJS} $(B_OBJS)
+	${LIBC} $(NAME) $(OBJS) $(B_OBJS)
 
-.c.o:
-		${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${INCS}
+%.o: %.c
+	$(CC) $(FLAGS) -c -o $@ $<
 
 all: $(NAME)
+
+bonus: $(OBJS) $(B_OBJS)
+	${LIBC} $(NAME) $(OBJS) $(B_OBJS)
 
 fclean: clean
 	$(RM) $(NAME) $(bonus)
 
 clean:
-	$(RM) -f $(OBJS) $(OBJS_B)
+	$(RM) -f $(OBJS) $(B_OBJS)
 
 re: fclean all
 
